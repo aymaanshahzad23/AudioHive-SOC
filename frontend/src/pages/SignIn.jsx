@@ -1,10 +1,12 @@
 import React from "react";
-// import 
+import "../styles/signin.css"
 
 function SignIn(){
     return(
-        <div className="">
-            <h1>GOOGLE AUTH SIGN IN</h1>
+        <div className="SignIn">
+            <div>
+                <h1>GOOGLE AUTH SIGN IN</h1>
+            </div>
         </div>
     )
 }

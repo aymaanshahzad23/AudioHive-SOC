@@ -1,5 +1,12 @@
 import React from "react";
 
-export default function Home(){
-    return <Header />;
+function Home(){
+    const logout = () => {
+        localStorage.clear()
+        window.location.reload()
+    } 
+    return (
+    <button onClick={logout}>LogOut</button>);
 }
+
+export default Home;
