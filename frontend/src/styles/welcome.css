@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* html{
+    border-right: 1px solid rgb(154, 154, 154);
+    position: absolute;
+} */
+
+.WelcomeContainer{
+    padding: 3em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: #E5E6DF;
+}
+
+.WelcomeContainer h1{
+    font-size: 1.7em;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0;
+    color: rgb(65, 64, 66);    
+}
+
+.WelcomeInfo{
+    height: 253px;
+    overflow: auto;
+    
+}
+
+.WelcomeInfo p{
+    margin-bottom: 2em;
+    color: rgb(65, 64, 66);
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+}
