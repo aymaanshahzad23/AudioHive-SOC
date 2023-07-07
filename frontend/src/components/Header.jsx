@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-// import style from "../style/header.module.css";
+import "../style/header.module.css";
 
 export default function Header(){
-    const logout = () => {
-        localStorage.clear()
-        window.location.reload()
-    } 
+    // const logout = () => {
+    //     localStorage.clear()
+    //     window.location.reload()
+    // } 
     return(
-        <div className="style.Header">
+        <div className="Header">
             <Link exact to = "/explore">
                 <img src = "/images/search.png" alt = "" />
             </Link>
-            <div className = 'style.nav_items'>
+            <div className = 'nav_items'>
                 <Link exact to = "/friends_invite">
                     <img src = "/images/invite.png" alt = "" />
                 </Link>
@@ -29,7 +29,7 @@ export default function Header(){
                     <img src = "/images/b1.png" alt = "" />
                 </Link>
             </div>
-            <button onClick={logout}>LogOut</button>
+            {/* <button onClick={logout}>LogOut</button> */}
         </div>
         
     )
