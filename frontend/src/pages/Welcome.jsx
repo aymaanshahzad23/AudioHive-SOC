@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "../styles/welcome.css"
-import  "./SignIn.jsx"
-import { Link } from "react-router-dom";
+import  "./SignIn.jsx";
 import { auth, provider } from "./config.jsx";
 import { signInWithPopup } from "firebase/auth";
-import Home from "./Home.jsx"
+import Header from "../components/Header";
 
 function Welcome(){
     const [value, setValue] = useState('');
     const loginWithGoogle = () => {
         signInWithPopup(auth, provider).then((data)=>{
-            setValue(data.user.email)
+            setValue(data.user.email);
             localStorage.setItem("email", data.user.email)
         })
     }
@@ -30,7 +29,7 @@ function Welcome(){
         <div className="actionBtn">
             {/* <Link exact to="/sign_in" className="PrimaryBtn">Sign-In</Link><br />
             <Link exact to="/sign_up" className="SecondaryBtn">Sign-Up</Link><br /> */}
-            {value?<Home/>:
+            {value?<Header/>:
             <button onClick={loginWithGoogle}>Login With Google</button>
             } 
         </div>
