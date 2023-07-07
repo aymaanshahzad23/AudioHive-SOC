@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../components/Header.jsx";
 
 function Home(){
     const logout = () => {
@@ -6,7 +7,12 @@ function Home(){
         window.location.reload()
     } 
     return (
-    <button onClick={logout}>LogOut</button>);
+        <>
+            <Header/>
+            <button onClick={logout}>LogOut</button>;
+        </>
+    
+    )
 }
 
 export default Home;
