@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 // import style from "../style/header.module.css";
 
 export default function Header(){
+    const logout = () => {
+        localStorage.clear()
+        window.location.reload()
+    } 
     return(
         <div className="style.Header">
             <Link exact to = "/explore">
@@ -25,6 +29,8 @@ export default function Header(){
                     <img src = "/images/b1.png" alt = "" />
                 </Link>
             </div>
+            <button onClick={logout}>LogOut</button>
         </div>
+        
     )
 }
