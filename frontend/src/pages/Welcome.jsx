@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../styles/welcome.css"
-import  "./SignIn.jsx";
+// import  "./SignIn.jsx";
 import { auth, provider } from "./config.jsx";
 import { signInWithPopup } from "firebase/auth";
-import Header from "../components/Header";
+// import Header from "../components/Header";
+import { Link } from "react-router-dom";
+import Home from "./Home";
 
 function Welcome(){
     const [value, setValue] = useState('');
@@ -11,7 +13,7 @@ function Welcome(){
         signInWithPopup(auth, provider).then((data)=>{
             setValue(data.user.email);
             localStorage.setItem("email", data.user.email)
-        })
+        })  
     }
     useEffect(()=>{
         setValue(localStorage.getItem("email"))
@@ -26,12 +28,12 @@ function Welcome(){
             <p>Were working to get AudioHive, can't wait for you to join.</p>
             <p>Were working to get AudioHive, can't wait for you to join.</p>      
         </div>
-        <div className="actionBtn">
-            {/* <Link exact to="/sign_in" className="PrimaryBtn">Sign-In</Link><br />
-            <Link exact to="/sign_up" className="SecondaryBtn">Sign-Up</Link><br /> */}
-            {value?<Header/>:
-            <button onClick={loginWithGoogle}>Login With Google</button>
-            } 
+        <div className="actionBtn btn">
+            {/* <Link to> */}
+            {value?<Home/>:
+            <button onClick={loginWithGoogle}>Login With Google</button>}
+            {/* </Link> */}
+            
         </div>
     </div>
     )
