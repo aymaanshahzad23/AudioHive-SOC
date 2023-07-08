@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React from "react";
 import Header from "../components/Header.jsx";
-
+import {AiOutLinePicCenter, AiOutLinePlus} from "react-icons/ai";
+import {BsGrid3X3gap} from "react-icons/bs";
 function Home(){
     const logout = () => {
         localStorage.clear()
@@ -10,12 +10,21 @@ function Home(){
     return (
         <>
             <Header/>
+            <div className="style.home_container"><DailyInfoCard/></div>
+            <div className="style.action_btn">
+                <button>
+                    <AiOutLinePlus/>
+                    Start a room
+                </button>
+                <button>
+                    <BsGrid3X3gap/>
+                </button>
+            </div>
             <button onClick={logout}>LogOut</button>;
         </>
     
     )
 }
-=======
 // import React from "react";
 
 // function Home(){
@@ -26,7 +35,6 @@ function Home(){
 //     return (
 //     <button onClick={logout}>LogOut</button>);
 // }
->>>>>>> bd69105fbb3af45e8d33f41729416dfc12f25d49
 
 // export default Home;
 
