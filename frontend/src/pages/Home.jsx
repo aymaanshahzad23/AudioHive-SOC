@@ -1,23 +1,27 @@
 import React from "react";
 import Header from "../components/Header.jsx";
-import {AiOutLinePicCenter, AiOutLinePlus} from "react-icons/ai";
-import {BsGrid3X3gap} from "react-icons/bs";
+// import {DailyInfoCard} from "../components/dailyInfoCard.jsx"
+import {AiOutlinePicCenter, AiOutlinePlus} from "react-icons/ai";
+import {BsGrid3X3Gap} from "react-icons/bs";
+
 function Home(){
     const logout = () => {
         localStorage.clear()
         window.location.reload()
-    } 
+    }
     return (
         <>
             <Header/>
-            <div className="style.home_container"><DailyInfoCard/></div>
-            <div className="style.action_btn">
+            <div className="home_container">NAME</div>
+            <div className="action_btn">
                 <button>
-                    <AiOutLinePlus/>
+                    {/* <AiOutlinePicCenter/> */}
+                    <AiOutlinePlus/>
                     Start a room
                 </button>
                 <button>
-                    <BsGrid3X3gap/>
+                    <BsGrid3X3Gap/>
+                    MENU
                 </button>
             </div>
             <button onClick={logout}>LogOut</button>;
@@ -27,16 +31,6 @@ function Home(){
 }
 // import React from "react";
 
-function Home(){
-    const logout = () => {
-        localStorage.clear()
-        window.location.reload()
-    } 
-    return (<>
-    <Header/>
-    <button onClick={logout}>LogOut</button>;
-    </>)
-}
 
 export default Home;
 

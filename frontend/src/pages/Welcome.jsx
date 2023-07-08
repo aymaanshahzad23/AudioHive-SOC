@@ -29,11 +29,8 @@ function Welcome(){
             <p>Were working to get AudioHive, can't wait for you to join.</p>      
         </div>
         <div className="actionBtn btn">
-            {/* <Link to> */}
-            {value?<Home/>:
-            <button onClick={loginWithGoogle}>Login With Google</button>}
-            {/* </Link> */}
-            
+            {value? <Home/>:
+            <Link onClick={loginWithGoogle}>Login With Google</Link>}
         </div>
     </div>
     )

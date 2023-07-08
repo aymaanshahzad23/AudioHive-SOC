@@ -1,12 +1,12 @@
 import React from "react";
-import data from "../data/dailyCard.json";
+// import data from "../data/dailyCard.json";
 
-export default function dailyInfoCard(){
-    console.log(data[0].title);
+function DailyInfoCard(){
+    // console.log(data[0].title);
     return (
-    <div className="style.dailyCard">
-    
-        {data.map((item) => (
+    <div className="dailyCard">
+    HAPPY!!!
+        {/* {data.map((item) => (
             
                 <div>
                     <span className="">{item.time}</span>
@@ -15,9 +15,10 @@ export default function dailyInfoCard(){
                         <p>{item.description}</p>
                     </div>
                 </div>
-    ))}
+    ))} */}
     </div>
     );  
             
 }
+export default DailyInfoCard();
     
