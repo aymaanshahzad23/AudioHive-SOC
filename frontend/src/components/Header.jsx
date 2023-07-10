@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import "../style/header.module.css";
 
 export default function Header(){
-    // const logout = () => {
-    //     localStorage.clear()
-    //     window.location.reload()
-    // } 
     return(
         <div className="Header">
             <Link exact to = "/explore">

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/signin.css"
-
+import {createUserDocumentFromAuth, signInWithGooglePopup} from "../pages/config.jsx"
 function SignIn(){
+    const logGoogleUser = async () => {
+        await signInWithGooglePopup();
+        window.location.reload();
+    }
+    
     return(
         <div className="SignIn">
-            <div>
-                <h1>GOOGLE AUTH SIGN IN</h1>
-            </div>
+                <button className="btn" onClick={logGoogleUser}>SignInWithGoogle</button>
         </div>
     )
 }

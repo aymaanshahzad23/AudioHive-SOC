@@ -1,25 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "../styles/welcome.css"
 // import  "./SignIn.jsx";
-import { auth, provider } from "./config.jsx";
-import { signInWithPopup } from "firebase/auth";
 // import Header from "../components/Header";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import Home from "./Home";
+import SignIn from "./SignIn";
 import Home from "./Home";
+// import { useState, useEffect } from "react";
 
 function Welcome(){
     const [value, setValue] = useState('');
-    const loginWithGoogle = () => {
-        signInWithPopup(auth, provider).then((data)=>{
-            setValue(data.user.email);
-            localStorage.setItem("email", data.user.email)
-        })  
-    }
+    // value.toString()
     useEffect(()=>{
         setValue(localStorage.getItem("email"))
     })
     return(
-        <div className="WelcomeContainer">
+        <div >
+        {value?<Home/>:<div className="WelcomeContainer">
         <h1>Welcome!</h1>
         <div className="WelcomeInfo">
             <p>Were working to get AudioHive, can't wait for you to joinnnnnnnn.</p>
@@ -28,10 +25,8 @@ function Welcome(){
             <p>Were working to get AudioHive, can't wait for you to join.</p>
             <p>Were working to get AudioHive, can't wait for you to join.</p>      
         </div>
-        <div className="actionBtn btn">
-            {value? <Home/>:
-            <Link onClick={loginWithGoogle}>Login With Google</Link>}
-        </div>
+        <SignIn/></div>}
+
     </div>
     )
 }
