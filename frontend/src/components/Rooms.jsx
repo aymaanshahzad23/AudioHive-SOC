@@ -1,6 +1,4 @@
 // VOICE CHAT ROOM NOT WORKING RIGHT NOW
-
-
 import { collection, onSnapshot } from "firebase/firestore";
 import React from "react";
 import { useState, useContext, useEffect } from "react";

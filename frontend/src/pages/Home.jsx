@@ -13,7 +13,6 @@ function Home(){
     const [title, setTitle] = useState("");
     return (
         <div className="home">
-            <Modal_ state={state} setState={setState} title={title} />
             <Header className="Header"/>
             <div className="home_container">NAME</div>
             <div className="action_btn">
