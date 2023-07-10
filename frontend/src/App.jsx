@@ -7,8 +7,8 @@ import SignIn from "./pages/SignIn";
 // import SignUp from "./pages/SignUp";
 // import AppLayout from "./pages/Layouts/AppLayout";
 // import Header from "./components/Header";
-import Home from "./pages/Home";
-import VoiceChat from "./components/VoiceChat";
+// import Home from "./pages/Home";
+// import VoiceChat from "./components/VoiceChat";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
           <Route path="/" element={<Welcome/>}/>
           <Route path="/sign_in" element={<SignIn/>}/>  
           {/* <Route path = "/home" element={<Home/>}/> */}
-          <Route path = "/vc" element={<VoiceChat/>}/>
+          {/* <Route path = "/vc" element={<VoiceChat/>}/> */}
           <Route path="*" element={<Error404/>}/>
         </Routes>
       </PlanLayout>

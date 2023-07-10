@@ -16,7 +16,7 @@
     /* align-items: center; */
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 6rem;
+    gap: 7rem;
 }
 
 .Header img{
