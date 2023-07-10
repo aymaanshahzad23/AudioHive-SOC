@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/signin.css"
-import {createUserDocumentFromAuth, signInWithGooglePopup} from "../pages/config.jsx"
+import {createUserDocumentFromAuth, signInWithGooglePopup} from "../pages/config.js"
 function SignIn(){
     const logGoogleUser = async () => {
         await signInWithGooglePopup();

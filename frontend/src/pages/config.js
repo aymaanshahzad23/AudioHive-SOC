@@ -28,7 +28,7 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider).then(
   localStorage.setItem("profilePic", profilePic)
 });
 
-const db = getFirestore();
+export const db = getFirestore();
 
 
 export const createUserDocumentFromAuth = async (userAuth)=>{

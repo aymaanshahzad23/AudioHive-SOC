@@ -4,6 +4,7 @@ import Welcome from "./pages/Welcome.jsx";
 import Error404 from "./pages/Error404.jsx";
 import PlanLayout from "./pages/Layouts/PlanLayout.jsx";
 import SignIn from "./pages/SignIn";
+import Rooms from "./components/Rooms";
 // import SignUp from "./pages/SignUp";
 // import AppLayout from "./pages/Layouts/AppLayout";
 // import Header from "./components/Header";
@@ -18,7 +19,7 @@ export default function App() {
           <Route path="/" element={<Welcome/>}/>
           <Route path="/sign_in" element={<SignIn/>}/>  
           {/* <Route path = "/home" element={<Home/>}/> */}
-          {/* <Route path = "/vc" element={<VoiceChat/>}/> */}
+          <Route path = "/vc" element={<Rooms/>}/>
           <Route path="*" element={<Error404/>}/>
         </Routes>
       </PlanLayout>

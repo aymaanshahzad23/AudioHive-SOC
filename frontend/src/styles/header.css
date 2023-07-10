@@ -10,19 +10,21 @@
     right: 0;
     /* background-color: #f2f0e4; */
     }
+    .nav_items{
+        display: flex;
+        /* align-items: center; */
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 5rem;
+    }
 
-.nav_items{
-    display: flex;
-    /* align-items: center; */
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 7rem;
-}
-
-.Header img{
-    width: 3rem;
-}
-
+    .Header img{
+        width: 2rem;
+    }
+    
 .pfp{
     border-radius: 50%;
 }
+/* @media screen {
+    
+} */
