@@ -3,21 +3,18 @@ import Header from "../components/Header.jsx";
 // import {DailyInfoCard} from "../components/dailyInfoCard.jsx"
 import {AiOutlinePicCenter, AiOutlinePlus} from "react-icons/ai";
 import {BsGrid3X3Gap} from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
-// import Welcome from "./Welcome.jsx";
+import "../styles/home.css"
+// import VoiceChat from "../components/VoiceChat.jsx";
 
 function Home(){
     
-    const logout = () => {
-        localStorage.clear()
-        window.location.reload();
-    }
+    
     return (
-        <>
+        <div className="home">
             <Header className="Header"/>
-            {/* <div className="home_container">NAME</div> */}
+            <div className="home_container">NAME</div>
             <div className="action_btn btn">
-                <button>
+                <button >
                     {/* <AiOutlinePicCenter/> */}
                     <AiOutlinePlus/>
                     Start a room 
@@ -27,19 +24,8 @@ function Home(){
                     MENU
                 </button>
             </div>
-            <Link to="/">
-                <button className="btn" onClick={logout}>LogOut</button>
-            </Link>
-        </>
+        </div>
     
     )
 }
-// import React from "react";
-
-
 export default Home;
-
-
-
-
-// We dont need to use Home.jsx, directly routing to Header.jsx

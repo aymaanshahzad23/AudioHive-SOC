@@ -28,10 +28,6 @@ export const signInWithGooglePopup = () => signInWithPopup(auth, provider).then(
   localStorage.setItem("profilePic", profilePic)
 });
 
-export const isSignedIn = auth.currentUser;
-// console.log(isSignedIn);
-
-
 const db = getFirestore();
 
 

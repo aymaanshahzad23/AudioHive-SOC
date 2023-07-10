@@ -11,12 +11,18 @@
     /* background-color: #f2f0e4; */
     }
 
-.Header img{
-    width: 25px;
+.nav_items{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 6rem;
 }
 
-img{
-    margin: 0 0.8em;
-    height: 10px;
-    width: 10px;
+.Header img{
+    width: 3rem;
+}
+
+.pfp{
+    border-radius: 50%;
 }

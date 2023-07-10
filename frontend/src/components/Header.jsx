@@ -1,32 +1,41 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import "../style/header.module.css";
+import "../styles/header.css";
 
-export default function Header(){
+function Header(){
+    const logout = () => {
+        localStorage.clear()
+        window.location.reload();
+    }
     return(
         <div className="Header">
-            <Link exact to = "/explore">
+            
+            <Link to = "/explore">
                 <img src = "/images/search.png" alt = "" />
             </Link>
+            
             <div className = 'nav_items'>
-                <Link exact to = "/friends_invite">
+            
+                <Link to = "/friends_invite">
                     <img src = "/images/invite.png" alt = "" />
                 </Link>
-
-                <Link exact to = "/upcoming">
+            
+                <Link to = "/upcoming">
                     <img src = "/images/calendar.png" alt = "" />
                 </Link>
-
-                <Link exact to = "/activity">
+            
+                <Link to = "/activity">
                     <img src = "/images/noti.png" alt = "" />
                 </Link>
 
-                <Link exact to = "/profile">
-                    <img src = "/images/b1.png" alt = "" />
+                <Link to = "/profile">
+                    <img className="pfp" src = {localStorage.getItem("profilePic")} alt = "" />
                 </Link>
+            
             </div>
-            {/* <button onClick={logout}>LogOut</button> */}
+            <button className="" onClick={logout}>LogOut</button>
         </div>
         
     )
 }
+export default Header;
