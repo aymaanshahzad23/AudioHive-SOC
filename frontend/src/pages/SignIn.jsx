@@ -3,8 +3,10 @@ import "../styles/signin.css"
 import {createUserDocumentFromAuth, signInWithGooglePopup} from "../pages/config.js"
 function SignIn(){
     const logGoogleUser = async () => {
-        await signInWithGooglePopup();
+        const user = await signInWithGooglePopup();
+        createUserDocumentFromAuth(user);
         window.location.reload();
+        // console.log(response);
     }
     
     return(

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "../components/Header.jsx";
 // import {DailyInfoCard} from "../components/dailyInfoCard.jsx"
 import {AiOutlinePicCenter, AiOutlinePlus} from "react-icons/ai";
-import {BsGrid3X3Gap} from "react-icons/bs";
+// import {BsGrid3X3Gap} from "react-icons/bs";
 import "../styles/home.css"
 import { useNavigate } from "react-router-dom";
 function Home(){
