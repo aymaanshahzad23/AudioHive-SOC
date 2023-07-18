@@ -3,5 +3,4 @@
 
 Team Members:
 Parul
-Varthika
 Aymaan 
