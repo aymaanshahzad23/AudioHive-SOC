@@ -6,6 +6,7 @@ import {AiOutlinePicCenter, AiOutlinePlus} from "react-icons/ai";
 // import {BsGrid3X3Gap} from "react-icons/bs";
 import "../styles/home.css"
 import { useNavigate } from "react-router-dom";
+// import VoiceCall from "../components/VoiceCall.jsx";
 function Home(){
     
     const navigate = useNavigate();
@@ -24,6 +25,7 @@ function Home(){
                     }}>
                     <AiOutlinePlus/>
                     Start a room 
+                    {/* <VoiceCall/> */}
                 </button>
                 
                 {/* <button>

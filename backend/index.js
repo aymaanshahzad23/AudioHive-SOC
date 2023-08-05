@@ -1,60 +1,43 @@
 import express from "express"
 import cors from "cors"
-import mongoose from "mongoose"
-import USER from "./models/user.js"
+// import mongoose, { connection } from "mongoose"
+// import USER from "./models/user.js"
 import dotenv from "dotenv"
 dotenv.config()
+import { createServer } from "http";
+import { Server } from "socket.io";
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors()) 
 
-//
-async function connectToDb(){
-    try {
-        const db = await mongoose.connect(process.env.MONGO_URI, {
-            useNewUrlParser : true,
-            useUnifiedTopology: true,
-            dbName : process.env.DB_NAME
-        });
+const server = createServer();
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+});
 
-        console.log(`MongoDB connected at ${db.connection.host}`)
-
-    }
-    catch(error){
-        console.log(error);
-    }
-}
-
-connectToDb();
-
-app.get("/test-api", (req, res)=>{
+app.get("/", (req, res)=>{
     return res.status(200).send("Hello");
 })
 
-app.get("/user", async (req, res)=>{
-    try{
-        const id = req.query.id;
-        let results;
-        if (id){
-            results = await USER.findById(id);
-        } 
-        else{
-            results = await USER.find();
-        }
-        return res.status(200).json(results);
-    }
-    catch(error){
-        return res.status(400).send(error);
-    }
-})
+io.on('connection', (socket)=>{
+    socket.emit('me', socket.id);
+    socket.on('disconnect', ()=>{
+        socket.broadcast.emit("callended");
+    });
 
-app.post("/user",async (req, res)=>{
-    console.log(req.body)
-    const newUser = await USER.create(req.body);
-    const results = await USER.find();
-    return res.status(200).json(newUser);
-})
+    socket.on("calluser", ({userToCall, signalData, from, names}) => {
+        io.to(userToCall).emit("calluser", {signal:signalData, from, names})           
+    });
 
-const port = process.env.PORT || 5001;
+    socket.on("answercall", (data)=>{
+        io.to(data.to).emit("callaccepted", data.signal)
+    })
+
+})
+ 
+const port = process.env.PORT || 5000;
 app.listen(port, ()=>console.log(`runnin at ${port}`));
