@@ -6,6 +6,7 @@ import {AiOutlinePicCenter, AiOutlinePlus} from "react-icons/ai";
 // import {BsGrid3X3Gap} from "react-icons/bs";
 import "../styles/home.css"
 import { useNavigate } from "react-router-dom";
+import Lobby from "../components/Lobby.jsx";
 // import VoiceCall from "../components/VoiceCall.jsx";
 function Home(){
     
@@ -15,24 +16,11 @@ function Home(){
     return (
         <div className="home">
             <Header className="Header"/>
-            <div className="home_container">NAME</div>
+            <div className="home_container">
+                NAME
+            </div>
             <div className="action_btn">
-                
-                <button className="btn" onClick={()=>{
-                    setTitle("create room");
-                    setState(true);
-                    navigate("/vc");
-                    }}>
-                    <AiOutlinePlus/>
-                    Start a room 
-                    {/* <VoiceCall/> */}
-                </button>
-                
-                {/* <button>
-                    <BsGrid3X3Gap/>
-                    MENU
-                </button> */}
-            
+                <Lobby/>
             </div>
         </div>
     
