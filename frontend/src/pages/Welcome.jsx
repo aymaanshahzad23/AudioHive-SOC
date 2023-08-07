@@ -13,11 +13,7 @@ function Welcome(){
         {value?(<Home/>):(<div className="WelcomeContainer">
         <h1>Welcome!</h1>
         <div className="WelcomeInfo">
-            <p>Were working to get AudioHive, can't wait for you to joinnnnnnnn.</p>
-            <p>Were working to get AudioHive, can't wait for you to join.</p>
-            <p>Were working to get AudioHive, can't wait for you to join.</p>
-            <p>Were working to get AudioHive, can't wait for you to join.</p>
-            <p>Were working to get AudioHive, can't wait for you to join.</p>      
+            <p>Were working to get AudioHive, can't wait for you to join.</p>    
         </div>
         <SignIn/></div>)
         }
