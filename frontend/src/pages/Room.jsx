@@ -18,7 +18,7 @@ const RoomPage = () => {
   const handleCallUser = useCallback(async () => {
     const stream = await navigator.mediaDevices.getUserMedia({
       audio: true,
-      // video: true,
+      video: false,
     });
     const offer = await peer.getOffer();
     socket.emit("user:call", { to: remoteSocketId, offer });
@@ -30,7 +30,7 @@ const RoomPage = () => {
       setRemoteSocketId(from);
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: true,
-        // video: true,
+        video: false,
       });
       setMyStream(stream);
       console.log(`Incoming Call`, from, offer);
@@ -114,8 +114,9 @@ const RoomPage = () => {
     <div className="Room">
       <div className="RoomHeading">
       <h1>Room Page</h1>
+      <img className="RoomPic" src = {localStorage.getItem("profilePic")} alt = "My Pic" />
       </div>
-
+      <div className="RoomStatus"></div>
       <h4>Status : {remoteSocketId ? "Connected" : "No one in room"}</h4>
       {/* {myStream && <button onClick={sendStreams}>Send Stream</button>} */}
       {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
@@ -135,7 +136,7 @@ const RoomPage = () => {
         <>
           {/* <h1>Remote Stream</h1> */}
           <ReactPlayer
-            playing="false"
+            playing
             // muted
             height="0"
             width="0"
