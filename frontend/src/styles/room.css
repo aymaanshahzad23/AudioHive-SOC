@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+}
+
+.Room{
+    background-color: #E5E6DF;
+    height: 100vh;
+    text-align: center;
+}
+
+.RoomHeading{
+    font-size: 2rem;
+
+}

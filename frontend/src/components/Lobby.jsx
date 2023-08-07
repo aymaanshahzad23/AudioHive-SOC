@@ -36,9 +36,9 @@ const LobbyScreen = () => {
     <div>
       <h1>Lobby</h1>
       <form onSubmit={handleSubmitForm}>
-        <label htmlFor="email">Email ID</label>
+        <label htmlFor="email">Display Name</label>
         <input
-          type="email"
+          type="text"
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
