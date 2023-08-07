@@ -19,7 +19,7 @@ function Home(){
             <div className="home_container">
                 NAME
             </div>
-            <div className="action_btn">
+            <div className="lobby">
                 <Lobby/>
             </div>
         </div>
