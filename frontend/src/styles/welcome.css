@@ -1,40 +1,43 @@
 *{
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
-/* html{
-    border-right: 1px solid rgb(154, 154, 154);
-    position: absolute;
-} */
-
 .WelcomeContainer{
-    padding: 3em 1.5em;
+    /* padding: 3em 1.5em; */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     height: 100vh;
     background-color: #E5E6DF;
 }
 
-.WelcomeContainer h1{
-    font-size: 1.7em;
-    font-weight: 500;
-    font-style: normal;
-    margin-bottom: 0;
-    color: rgb(65, 64, 66);    
+.welcomeNav{
+    margin: 5vh 0;
+    display: flex;
+    flex-direction: row;
+    gap: 78vw;
+    justify-content: center;
 }
 
-.WelcomeInfo{
-    height: 253px;
-    overflow: auto;
+.welcomeNav img{
+    border-radius: 18px;
+    height: 20vh;
+    width: 20vh;
+}
+
+.app{
     
 }
 
-.WelcomeInfo p{
-    margin-bottom: 2em;
-    color: rgb(65, 64, 66);
-    font-size: 1em;
-    font-style: normal;
-    font-weight: 400;
+.welcomeNav img:hover{
+    scale: 1.13;
+    transition: 0.3s ease-in-out;
+}
+
+.WelcomeInfo{
+    text-align: center;
+    /* height: 253px; */
+    /* overflow: auto; */
 }

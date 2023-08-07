@@ -34,7 +34,7 @@ const LobbyScreen = () => {
 
   return (
     <div>
-      <h1>Lobby</h1>
+      {/* <h1>Lobby</h1> */}
       <form onSubmit={handleSubmitForm}>
         <label htmlFor="email">Display Name</label>
         <input
@@ -52,7 +52,7 @@ const LobbyScreen = () => {
           onChange={(e) => setRoom(e.target.value)}
         />
         <br />
-        <button>Join</button>
+        <button className="btn">Join</button>
       </form>
     </div>
   );

@@ -9,11 +9,15 @@ function Welcome(){
         setValue(localStorage.getItem("email"))
     })
     return(
-        <div >
+        <div className="">
         {value?(<Home/>):(<div className="WelcomeContainer">
-        <h1>Welcome!</h1>
+        {/* <h1>Welcome!</h1> */}
+        <div className="welcomeNav">
+            <img src="logo.png" alt=""/>
+            <button className="app">Made By</button>
+        </div>
         <div className="WelcomeInfo">
-            <p>Were working to get AudioHive, can't wait for you to join.</p>    
+        Ready to add some 'social' to your distancing? <br /> AudioHive's The Place To Be!!!
         </div>
         <SignIn/></div>)
         }
