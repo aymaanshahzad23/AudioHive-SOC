@@ -1,6 +1,22 @@
-button:hover{
-    scale: 1.02;
-    transition: 0.2s;
-    color: black;
-    /* background-color: yellow; */
+
+
+.SignIn{
+    font-size: 2vw;
+}
+
+.button{
+    border-radius: 12px;
+    background-color: rgb(255, 130, 151);
+    transition: 0.4s ease-in-out;
+    padding: 1vh;
+    color: #910580;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.button:hover{
+    scale: 1.2;
+    color: rgb(255, 130, 151);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: black;
+    transition: 0.4s ease-in-out;
 }

@@ -22,12 +22,11 @@ function Welcome(){
         <div className="WelcomeInfo">
         Ready to add some 'social' to your distancing? <br /> <span className="hive">AudioHive's</span> The Place To Be!!!
         </div>
-        <div className="btn">    
+        <div className="loginButton">    
         <SignIn/>
         </div>
-        </div>)
-        }
-
+        </div>
+        )}
     </div>
     )
 }
