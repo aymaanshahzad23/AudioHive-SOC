@@ -27,7 +27,7 @@
 }
 
 .app:hover{
-    color: #C539B4;
+    color:  rgb(255, 130, 151);
     cursor: text;
 }
 
@@ -47,7 +47,7 @@
 .WelcomeInfo{
     text-align: center;
     font-size: 3vw;
-    margin-top: 10vh;
+    margin-top: 13vh;
     /* height: 253px; */
     /* overflow: auto; */
 }

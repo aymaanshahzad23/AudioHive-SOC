@@ -1,7 +1,5 @@
-
-
 .SignIn{
-    font-size: 2vw;
+    font-size: 1.4vw;
 }
 
 .button{
@@ -9,7 +7,7 @@
     background-color: rgb(255, 130, 151);
     transition: 0.4s ease-in-out;
     padding: 1vh;
-    color: #910580;
+    color: #31002b;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
