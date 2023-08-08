@@ -2,6 +2,43 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: #E5E6DF;
+    background-color: #FFF2CC;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10vh; */
+    padding-top: 1vh;
+    /* gap: 8vh; */
+    text-align: center;
+}
+
+.lobbyContainer{
+    align-self: center;
+    border-radius: 20px;
+    background-color: pink;
+}
+
+.homeContainer{
+    justify-content: center;
+    font-size: 3vw;
+}
+
+.joinLobby{
+    width: 40vw;
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    /* vertical-align; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    /* border: 1px solid black; */
+}
+
+.joinLobby:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.homeHeader{
+    height: 20vh;
 }
