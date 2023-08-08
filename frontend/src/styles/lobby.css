@@ -3,25 +3,34 @@
     flex-direction:column;
 }
 
-label{
-    padding: 0 1vw;
-}
-
 input{
-    border-radius: 15px;
-    font-size: small;
+    border-radius:10px;
 }
 
 #email{
-    padding: 3px 10px;
+    width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
+#email:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
 
 #room{
-    padding: 3px 10px ;
+    width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
+#room:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+
 
 .formSubmit{
-    border-radius: 30px !important;
+    border-radius: 10px !important;
     transition: 0.3s ease-in-out;
     /* background-color: pink !important; */
     color: #31002b !important;
@@ -35,6 +44,5 @@ input{
     scale: 1.03;
     color: rgb(255, 130, 151) !important;
     background-color: black !important;
-
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
