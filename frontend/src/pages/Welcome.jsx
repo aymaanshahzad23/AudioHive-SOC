@@ -15,7 +15,7 @@ function Welcome(){
         {/* <h1>Welcome!</h1> */}
         <div className="welcomeNav">
             <Link to='/'>
-            <img  className="appLogo" src="logo.png" alt=""/>
+            <img className="appLogo" src="logo.png" alt=""/>
             </Link>
             <button className="app">By IITB</button>
         </div>
