@@ -1,3 +1,40 @@
-.formName{
-    color: black;
+.formContainer{
+    display: flex;
+    flex-direction:column;
+}
+
+label{
+    padding: 0 1vw;
+}
+
+input{
+    border-radius: 15px;
+    font-size: small;
+}
+
+#email{
+    padding: 3px 10px;
+}
+
+#room{
+    padding: 3px 10px ;
+}
+
+.formSubmit{
+    border-radius: 30px !important;
+    transition: 0.3s ease-in-out;
+    /* background-color: pink !important; */
+    color: #31002b !important;
+    /* background-color: rgb(255, 130, 151) !important; */
+    /* background-color: rgb(225, 57, 85) !important; */
+    padding: 1vh 1vw;
+}
+
+.formSubmit:hover{
+    transition: 0.3s ease-in-out;
+    scale: 1.03;
+    color: rgb(255, 130, 151) !important;
+    background-color: black !important;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }

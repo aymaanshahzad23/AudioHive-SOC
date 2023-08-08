@@ -39,32 +39,34 @@ const LobbyScreen = () => {
   }, [socket, handleJoinRoom]);
 
   return (
-    <div>
+    <>
       {/* <h1>Lobby</h1> */}
-      <form onSubmit={handleSubmitForm}>
-        <div className="formName">
-          <label htmlFor="email">Display Name</label>
-          <input
-            type="text"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+        <form onSubmit={handleSubmitForm}>
+      <div className="formContainer">
+          <div className="formName">
+            <label className="name" htmlFor="email">Display Name</label>
+            <input
+              type="text"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+            <br />
+          <div className="formRoom">
+            <label className="room" htmlFor="room">Room Number</label>
+            <input
+              type="text"
+              id="room"
+              value={room}
+              onChange={(e) => setRoom(e.target.value)}
+            />
+          </div>
           <br />
-        <div className="formRoom">
-          <label htmlFor="room">Room Number</label>
-          <input
-            type="text"
-            id="room"
-            value={room}
-            onChange={(e) => setRoom(e.target.value)}
-          />
-        </div>
-        <br />
-        <button className="formSubmit" type="submit">Join Room</button>
-      </form>
-    </div>
+      </div>
+          <button className="formSubmit" type="submit">Join Room</button>
+        </form>
+    </>
   );
 };
 
