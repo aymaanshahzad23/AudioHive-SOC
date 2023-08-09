@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
 .Header{
     display: flex;
     flex-direction: row;
@@ -10,19 +12,27 @@
     right: 0;
     /* background-color: #f2f0e4; */
     }
-    .nav_items{
-        display: flex;
-        /* align-items: center; */
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 5rem;
-    }
+.nav_items{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5rem;
+}
 
-    .Header img{
-        width: 2.3rem;
-    }
-    
+.logoMain{
+    /* top */
+    margin-top: 1vw;
+    border-radius: 8px;
+    scale: 2;
+}
+
+.Header img{
+    width: 2.3rem;
+}
+
 .pfp{
+    scale: 1.3;
     border-radius: 50%;
 }
 /* @media screen {

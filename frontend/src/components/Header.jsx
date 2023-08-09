@@ -8,23 +8,24 @@ function Header(){
         window.location.reload();
     }
     return(
+    <>
         <div className="Header">
             
-            <Link to = "/explore">
-                <img src = "/images/search.png" alt = "" />
+            <Link to = "/">
+                <img className="logoMain" src = "logo.png" alt = "" />
             </Link>
             
             <div className = 'nav_items'>
             
-                <Link to = "/friends_invite">
+                <Link to = "/features">
                     <img src = "/images/invite.png" alt = "" />
                 </Link>
             
-                <Link to = "/upcoming">
+                <Link to = "/features">
                     <img src = "/images/calendar.png" alt = "" />
                 </Link>
             
-                <Link to = "/activity">
+                <Link to = "/features">
                     <img src = "/images/noti.png" alt = "" />
                 </Link>
 
@@ -33,9 +34,9 @@ function Header(){
                 </Link>
             
             </div>
-            <button className="" onClick={logout}>LogOut</button>
+            <button className="logout" onClick={logout}>LogOut</button>
         </div>
-        
+    </>
     )
 }
 export default Header;

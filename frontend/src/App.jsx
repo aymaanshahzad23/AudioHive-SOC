@@ -5,6 +5,7 @@ import Error404 from "./pages/Error404.jsx";
 import PlanLayout from "./pages/Layouts/PlanLayout.jsx";
 import SignIn from "./pages/SignIn";
 import Room from "./pages/Room";
+import Features from "./pages/Features";
 // import Rooms from "./components/Rooms";
 // import SignUp from "./pages/SignUp";
 // import AppLayout from "./pages/Layouts/AppLayout";
@@ -20,6 +21,8 @@ export default function App() {
           <Route path="/" element={<Welcome/>}/>
           <Route path="/sign_in" element={<SignIn/>}/>
           <Route path = "/room/:roomId" element={<Room/>}/>
+          <Route path = "/features" element={<Features/>}/>
+          {/* <Route path = "/profile" element={</>}/> */}
           <Route path="*" element={<Error404/>}/>
         </Routes>
       </PlanLayout>

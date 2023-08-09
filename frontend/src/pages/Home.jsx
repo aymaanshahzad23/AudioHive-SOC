@@ -16,8 +16,10 @@ function Home(){
             </div>
             <div className="lobbyContainer">
                 <div className="joinLobby">
-                    <div className="homeContainer">
-                        Welcome
+                    <div className="homeContainer t">
+                        {/* <div className="t"> */}
+                            AudioHive
+                        {/* </div> */}
                     </div>
                     <div className="lobby">
                         <Lobby/>

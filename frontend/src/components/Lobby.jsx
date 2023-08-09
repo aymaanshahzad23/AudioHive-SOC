@@ -61,16 +61,10 @@ const LobbyScreen = () => {
       <form onSubmit={handleSubmitForm}>
         <div className="formContainer">
           <div className="formName">
-            {/* <label className="name" htmlFor="email">
-              Display Name
-            </label> */}
             <input placeholder="ChatRoom Name" autoComplete="off" type="text" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
           </div>
           <br />
           <div className="formRoom">
-            {/* <label className="room" htmlFor="room">
-              Room Number
-            </label> */}
             <input placeholder="Room ID" autoComplete="off" type="text" id="room" value={room} onChange={(e) => setRoom(e.target.value)}/>
           </div>
           <br />

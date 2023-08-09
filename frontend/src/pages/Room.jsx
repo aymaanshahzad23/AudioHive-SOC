@@ -82,10 +82,13 @@ const RoomPage = () => {
 
   // Function to navigate back to the Home page
   const handleBackToHome = () => {
+    // window.location.reload()
     navigate("/"); // Replace "/" with the appropriate route for your Home page
-    window.location.reload
   };
 
+  const endCall = () => {
+    window.location.reload();
+  }
 
   const handleNegoNeedFinal = useCallback(async ({ ans }) => {
     await peer.setLocalDescription(ans);
@@ -139,9 +142,9 @@ const RoomPage = () => {
         </>
       )}
       <br />
-      <button onClick={
-        handleBackToHome
-        }>Back To Home</button>
+      {/* <button onClick={endCall}>End Call</button>
+      <br /> */}
+      <button onClick={handleBackToHome}>End Call</button>
     </div>
   );
 };
