@@ -79,7 +79,7 @@ const RoomPage = () => {
   const navigate = useNavigate();
 
   const handleBackToHome = () => {
-    navigate("/");
+    navigate("/");x
   };
 
   const endCall = () => {

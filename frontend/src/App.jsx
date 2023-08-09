@@ -6,12 +6,6 @@ import PlanLayout from "./pages/Layouts/PlanLayout.jsx";
 import SignIn from "./pages/SignIn";
 import Room from "./pages/Room";
 import Features from "./pages/Features";
-// import Rooms from "./components/Rooms";
-// import SignUp from "./pages/SignUp";
-// import AppLayout from "./pages/Layouts/AppLayout";
-// import Header from "./components/Header";
-// import Home from "./pages/Home";
-// import VoiceChat from "./components/VoiceChat";
 
 export default function App() {
   return (
@@ -22,7 +16,7 @@ export default function App() {
           <Route path="/sign_in" element={<SignIn/>}/>
           <Route path = "/room/:roomId" element={<Room/>}/>
           <Route path = "/features" element={<Features/>}/>
-          {/* <Route path = "/profile" element={</>}/> */}
+          {/* <Route path = "/profile" element={</>} /> */}
           <Route path="*" element={<Error404/>}/>
         </Routes>
       </PlanLayout>

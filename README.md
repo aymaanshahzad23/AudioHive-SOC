@@ -2,5 +2,5 @@
 2. *Use "npm run dev" in each directory to run them separately*
 
 Team Members:
-Parul
-Aymaan 
+1. Parul
+2. Aymaan 
