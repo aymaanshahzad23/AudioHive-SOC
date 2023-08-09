@@ -76,14 +76,10 @@ const RoomPage = () => {
     [socket]
   );
 
+  const navigate = useNavigate();
 
-  const navigate = useNavigate(); // Initialize useNavigate
-  // ... (rest of your component code)
-
-  // Function to navigate back to the Home page
   const handleBackToHome = () => {
-    // window.location.reload()
-    navigate("/"); // Replace "/" with the appropriate route for your Home page
+    navigate("/");
   };
 
   const endCall = () => {
@@ -122,34 +118,32 @@ const RoomPage = () => {
 
   return (
     <div className="RoomContainer">
-    <div className="Room">
-      <div className="RoomHeading">
-        <h1>Chat Room</h1>
+      <div className="Room">
+        <div className="RoomHeading">
+          <h1>Chat Room</h1>
+        </div>
+        <div className="myPic">
+          <img className = "RoomPic" src = {localStorage.getItem("profilePic")} />
+        </div>
+        <div className="RoomStatus"></div>
+        <div className="status">
+        <h4>Status : {remoteSocketId ? "Connected" : "No one in room"}</h4>
+        {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
+        {myStream && (
+          <>
+            <ReactPlayer playing height="0" width="0" url={myStream}/>
+          </>
+        )}
+        {remoteStream && (
+          <>
+            <ReactPlayer playing height="0" width="0" url={remoteStream}/>
+          </>
+        )}
+        </div>
+          <div className='endCallContainer'>
+            <button className='endCallButton' onClick={endCall}>End Call</button>
+          </div>
       </div>
-      <div className="myPic">
-        <img className = "RoomPic" src = {localStorage.getItem("profilePic")} />
-      </div>
-      <div className="RoomStatus"></div>
-      <div className="status">
-      <h4>Status : {remoteSocketId ? "Connected" : "No one in room"}</h4>
-      {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
-      {myStream && (
-        <>
-          <ReactPlayer playing height="0" width="0" url={myStream}/>
-        </>
-      )}
-      {remoteStream && (
-        <>
-          <ReactPlayer playing height="0" width="0" url={remoteStream}/>
-        </>
-      )}
-      </div>
-      {/* <button onClick={endCall}>End Call</button>
-      <br /> */}
-      <div className='endCallContainer'>
-        <button className='endCallButton'>End Call</button>
-      </div>
-    </div>
     </div>
   );
 };
