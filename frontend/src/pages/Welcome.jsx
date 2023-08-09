@@ -14,7 +14,7 @@ function Welcome(){
         {value?(<Home/>):(<div className="WelcomeContainer">
         {/* <h1>Welcome!</h1> */}
         <div className="welcomeNav">
-            <Link to='/'>
+            <Link to='https://github.com/aymaanshahzad23/AudioHive-SOC' target="_blank">
             <img className="appLogo" src="logo.png" alt=""/>
             </Link>
             <button className="app">By IITB</button>

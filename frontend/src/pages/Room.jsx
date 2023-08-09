@@ -113,7 +113,7 @@ const RoomPage = () => {
   return (
     <div className="Room">
       <div className="RoomHeading">
-      <h1>Room Page</h1>
+      <h1>Chat Room</h1>
       <img className="RoomPic" src = {localStorage.getItem("profilePic")} alt = "My Pic" />
       </div>
       <div className="RoomStatus"></div>
