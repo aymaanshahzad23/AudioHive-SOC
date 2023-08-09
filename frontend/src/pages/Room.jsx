@@ -2,6 +2,7 @@ import React, { useEffect, useCallback, useState } from "react";
 import ReactPlayer from "react-player";
 import peer from "../service/peer";
 import '../styles/room.css'
+import { useNavigate } from "react-router-dom"
 import { useSocket } from "../context/SocketProvider";
 
 const RoomPage = () => {
@@ -75,6 +76,17 @@ const RoomPage = () => {
     [socket]
   );
 
+
+  const navigate = useNavigate(); // Initialize useNavigate
+  // ... (rest of your component code)
+
+  // Function to navigate back to the Home page
+  const handleBackToHome = () => {
+    navigate("/"); // Replace "/" with the appropriate route for your Home page
+    window.location.reload
+  };
+
+
   const handleNegoNeedFinal = useCallback(async ({ ans }) => {
     await peer.setLocalDescription(ans);
   }, []);
@@ -102,48 +114,34 @@ const RoomPage = () => {
       socket.off("peer:nego:final", handleNegoNeedFinal);
     };
   }, [
-    socket,
-    handleUserJoined,
-    handleIncommingCall,
-    handleCallAccepted,
-    handleNegoNeedIncomming,
-    handleNegoNeedFinal,
+    socket, handleUserJoined, handleIncommingCall, handleCallAccepted, handleNegoNeedIncomming, handleNegoNeedFinal,
   ]);
 
   return (
     <div className="Room">
       <div className="RoomHeading">
-      <h1>Chat Room</h1>
-      <img className="RoomPic" src = {localStorage.getItem("profilePic")} alt = "My Pic" />
+        <h1>Chat Room</h1>
+      </div>
+      <div className="myPic">
+        <img className = "RoomPic" src = {localStorage.getItem("profilePic")} />
       </div>
       <div className="RoomStatus"></div>
       <h4>Status : {remoteSocketId ? "Connected" : "No one in room"}</h4>
-      {/* {myStream && <button onClick={sendStreams}>Send Stream</button>} */}
       {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
       {myStream && (
         <>
-          {/* <h1>My Stream</h1> */}
-          <ReactPlayer
-            playing
-            // muted
-            height="0"
-            width="0"
-            url={myStream}
-          />
+          <ReactPlayer playing height="0" width="0" url={myStream}/>
         </>
       )}
       {remoteStream && (
         <>
-          {/* <h1>Remote Stream</h1> */}
-          <ReactPlayer
-            playing
-            // muted
-            height="0"
-            width="0"
-            url={remoteStream}
-          />
+          <ReactPlayer playing height="0" width="0" url={remoteStream}/>
         </>
       )}
+      <br />
+      <button onClick={
+        handleBackToHome
+        }>Back To Home</button>
     </div>
   );
 };
