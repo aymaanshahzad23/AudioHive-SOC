@@ -121,6 +121,7 @@ const RoomPage = () => {
   ]);
 
   return (
+    <div className="RoomContainer">
     <div className="Room">
       <div className="RoomHeading">
         <h1>Chat Room</h1>
@@ -129,6 +130,7 @@ const RoomPage = () => {
         <img className = "RoomPic" src = {localStorage.getItem("profilePic")} />
       </div>
       <div className="RoomStatus"></div>
+      <div className="status">
       <h4>Status : {remoteSocketId ? "Connected" : "No one in room"}</h4>
       {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
       {myStream && (
@@ -141,10 +143,13 @@ const RoomPage = () => {
           <ReactPlayer playing height="0" width="0" url={remoteStream}/>
         </>
       )}
-      <br />
+      </div>
       {/* <button onClick={endCall}>End Call</button>
       <br /> */}
-      <button onClick={handleBackToHome}>End Call</button>
+      <div className='endCallContainer'>
+        <button className='endCallButton'>End Call</button>
+      </div>
+    </div>
     </div>
   );
 };

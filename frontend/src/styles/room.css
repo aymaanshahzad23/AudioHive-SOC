@@ -2,13 +2,30 @@
     margin: 0;
     text-decoration: none;
     padding: 0;
-    /* align-items: center; */
+}
+
+.RoomContainer{
+    height: 100vh;
+    background-color: #FFF2CC;
 }
 
 .Room{
-    background-color: #FFF2CC;
-    height: 100vh;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: rgb(249, 169, 182);
+    padding: 10vh;
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    gap: 4vh;
+    border: 2px solid black;
 }
 
 .RoomStatus{
@@ -19,13 +36,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
 .RoomHeading{
-    justify-self: center;
     font-size: 2rem;
 }
 
 .RoomPic{
     border-radius: 30px;
 }
+
+.status{
+    font-size: 1.2vw;
+}
+  
+.endCallButton {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 10vw;
+    border-radius: 10px;
+    background-color: rgb(255, 114, 114);
+    padding: 1vh 1vw;
+    font-size: 1.3vw;
+  }
+  

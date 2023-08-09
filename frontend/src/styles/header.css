@@ -31,6 +31,10 @@
     width: 2.3rem;
 }
 
+.logout{
+    font-size: 1.3vw;
+}
+
 .pfp{
     scale: 1.3;
     border-radius: 50%;
