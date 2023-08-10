@@ -29,12 +29,12 @@ function Header(){
                     <img src = "/images/noti.png" alt = "" />
                 </Link>
 
-                <Link to = "/profile">
+                <Link to = "/features">
                     <img className="pfp" src = {localStorage.getItem("profilePic")} alt = "" />
                 </Link>
             
             </div>
-            <button className="logout" onClick={logout}>LogOut</button>
+            <button className="logout" onClick={logout}>Logout</button>
         </div>
     </>
     )

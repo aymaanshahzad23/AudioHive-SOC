@@ -18,7 +18,7 @@
     /* align-items: center; */
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 7rem;
+    gap: 7vw;
     scale: 1.1;
 }
 
@@ -44,6 +44,20 @@
 
 .logout{
     font-size: 1.3vw;
+    /* color:  !important; */
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,0.1);
+    background-color: rgb(255, 130, 151);
+    padding: 1vh 1vw;
+    border-radius: 13px;
+    transition: 0.4s ease-in-out;
+}
+
+.logout:hover{
+    scale: 1.2;
+    color: rgb(255, 130, 151);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: black;
+    transition: 0.4s ease-in-out;
 }
 
 .pfp{

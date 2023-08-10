@@ -14,6 +14,9 @@ const RoomPage = () => {
   const handleUserJoined = useCallback(({ email, id }) => {
     console.log(`Email ${email} joined room`);
     setRemoteSocketId(id);
+
+    socket.emit("user:joined", { id }); //EDIT
+
   }, []);
 
   const handleCallUser = useCallback(async () => {
@@ -90,7 +93,7 @@ const RoomPage = () => {
   useEffect(() => {
     peer.peer.addEventListener("track", async (ev) => {
       const remoteStream = ev.streams;
-      console.log("GOT TRACKS!!");
+      // console.log("GOT TRACKS!!");
       setRemoteStream(remoteStream[0]);
     });
   }, []);
@@ -102,12 +105,19 @@ const RoomPage = () => {
     socket.on("peer:nego:needed", handleNegoNeedIncomming);
     socket.on("peer:nego:final", handleNegoNeedFinal);
 
+    socket.on("user:list", (users) => {
+      // Check if the current user is connected
+      const isConnected = users.some((user) => user.id === remoteSocketId);
+      setRemoteSocketId(isConnected ? remoteSocketId : null);
+    });
+
     return () => {
       socket.off("user:joined", handleUserJoined);
       socket.off("incomming:call", handleIncommingCall);
       socket.off("call:accepted", handleCallAccepted);
       socket.off("peer:nego:needed", handleNegoNeedIncomming);
       socket.off("peer:nego:final", handleNegoNeedFinal);
+      socket.off("user:list");
     };
   }, [
     socket, handleUserJoined, handleIncommingCall, handleCallAccepted, handleNegoNeedIncomming, handleNegoNeedFinal,
@@ -124,8 +134,8 @@ const RoomPage = () => {
         </div>
         <div className="RoomStatus"></div>
         <div className="status">
-        <h4>Status : {remoteSocketId ? "Connected" : "No one in room"}</h4>
-        {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
+        <h4 className="statusCondtition">Status : {remoteSocketId ? "Connected" : "No one in room"}</h4>
+        {remoteSocketId && <button className="callButton" onClick={handleCallUser}>CALL</button>}
         {myStream && (
           <>
             <ReactPlayer playing height="0" width="0" url={myStream}/>

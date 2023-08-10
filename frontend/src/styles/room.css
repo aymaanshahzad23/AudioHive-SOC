@@ -9,6 +9,16 @@
     background-color: #FFF2CC;
 }
 
+.callButton{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 10vw;
+    border-radius: 10px;
+    background-color: rgb(255, 114, 114, 0.8);
+    padding: 1vh 1vw;
+    margin-top: 1rem;
+    font-size: 1.3vw;
+}
+
 .Room {
     align-items: center;
     position: absolute;
@@ -48,7 +58,12 @@
 
 .status {
     font-size: 1.2vw;
+    background-color: pink;
+    color: rgb(255, 73, 73);
+    padding: 1vh 1vw;
+    border-radius: 2rem;
 }
+
 
 .endCallButton {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

@@ -37,3 +37,13 @@ io.on("connection", (socket) => {
     io.to(to).emit("peer:nego:final", { from: socket.id, ans });
   });
 });
+
+function getUsersInRoom(room) {
+  const users = [];
+  for (const [email, socketId] of emailToSocketIdMap.entries()) {
+    if (io.sockets.adapter.rooms.get(room)?.has(socketId)) {
+      users.push({ email, id: socketId });
+    }
+  }
+  return users;
+}
