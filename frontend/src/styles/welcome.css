@@ -7,7 +7,7 @@
 }
 
 .WelcomeContainer{
-    background: url("");
+    /* background: url(""); */
     /* padding: 3em 1.5em; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,6 +17,7 @@
     height: 100vh;
     background-color: #FFF2CC;
 }
+
 .welcomeNav{
     margin: 5vh 0;
     display: flex;
@@ -30,11 +31,11 @@
     cursor: text;
 }
 
-.appLogo{
-    border-radius: 18px;
-    height: 10vh;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 10vh;
+    .appLogo{
+        border-radius: 18px;
+        height: 10vh;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        width: 10vh;
 }
 
 .appLogo:hover{
