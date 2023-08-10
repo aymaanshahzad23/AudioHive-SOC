@@ -78,12 +78,9 @@ const RoomPage = () => {
 
   const navigate = useNavigate();
 
-  const handleBackToHome = () => {
-    navigate("/");x
-  };
-
   const endCall = () => {
-    window.location.reload();
+    navigate("/");
+    // window.location.reload();
   }
 
   const handleNegoNeedFinal = useCallback(async ({ ans }) => {

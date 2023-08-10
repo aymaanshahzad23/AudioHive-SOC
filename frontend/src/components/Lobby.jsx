@@ -44,20 +44,12 @@ const LobbyScreen = () => {
   }, [socket, handleJoinRoom]);
 
   useEffect(() => {
-    // Load stored values from localStorage
     const storedEmail = localStorage.getItem("displayName");
     const storedRoom = localStorage.getItem("room");
-    // if (storedEmail) {
-    //   setEmail(storedEmail);
-    // }
-    // if (storedRoom) {
-    //   setRoom(storedRoom);
-    // }
   }, []);
 
   return (
     <>
-      {/* <h1>Lobby</h1> */}
       <form onSubmit={handleSubmitForm}>
         <div className="formContainer">
           <div className="formName">
