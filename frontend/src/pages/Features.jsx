@@ -3,7 +3,6 @@ import "../styles/features.css"
 const Features = () => {
   return (
     <div className='containerFeature'>
-        {/* <p class="emoji">🚧</p> */}
         <img className='construction' src="construction.gif" alt="" />
             <h1 className='headingFeature'>Oops! This Page is Still Under Construction!</h1>
         <div className='bodyFeature'>

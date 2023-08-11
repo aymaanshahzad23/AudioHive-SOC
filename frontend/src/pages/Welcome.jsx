@@ -12,7 +12,6 @@ function Welcome(){
     return(
         <div className="">
         {value?(<Home/>):(<div className="WelcomeContainer">
-        {/* <h1>Welcome!</h1> */}
         <div className="welcomeNav">
             <Link to='https://github.com/aymaanshahzad23/AudioHive-SOC' target="_blank">
             <img className="appLogo" src="logo.png" alt=""/>

@@ -16,7 +16,6 @@ export default function App() {
           <Route path="/sign_in" element={<SignIn/>}/>
           <Route path = "/room/:roomId" element={<Room/>}/>
           <Route path = "/features" element={<Features/>}/>
-          {/* <Route path = "/profile" element={</>} /> */}
           <Route path="*" element={<Error404/>}/>
         </Routes>
       </PlanLayout>

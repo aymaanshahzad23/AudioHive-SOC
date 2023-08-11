@@ -83,7 +83,6 @@ const RoomPage = () => {
 
   const endCall = () => {
     navigate("/");
-    // window.location.reload();
   }
 
   const handleNegoNeedFinal = useCallback(async ({ ans }) => {
@@ -106,7 +105,6 @@ const RoomPage = () => {
     socket.on("peer:nego:final", handleNegoNeedFinal);
 
     socket.on("user:list", (users) => {
-      // Check if the current user is connected
       const isConnected = users.some((user) => user.id === remoteSocketId);
       setRemoteSocketId(isConnected ? remoteSocketId : null);
     });
