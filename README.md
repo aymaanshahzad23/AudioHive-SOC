@@ -34,5 +34,3 @@ To run the AudioHive app locally, follow these steps:
   - Email: aymaanshahzad23@gmail.com
 
 Feel free to contribute to this project by forking the repository and submitting pull requests. If you encounter any issues or have suggestions for improvements, please open an issue on GitHub.
-
-Happy coding! 🚀
